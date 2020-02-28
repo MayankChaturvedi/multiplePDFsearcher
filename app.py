@@ -31,11 +31,9 @@ def goforit(a,String):
     
 
 root = Tk()
-root.geometry("600x400")
+root.geometry("900x600")
 
 root.title("Made with ♥️ for math peeps")
-
-lbl = Label(root, text="the word you want to search : ")
 
 up = Frame(root, borderwidth=2, relief="solid")
 
@@ -53,7 +51,7 @@ uprgt=Frame(up,width=50)
 
 uprgt.pack(side="left")
 
-lbl = Label(uplft, text="the word you want to search : ")
+lbl = Label(uplft, text="the word you want to search : ",font=("Courier", 18))
 
 lbl.pack()
 
@@ -68,7 +66,7 @@ lbl2.pack(side="right")
 scrollbar = Scrollbar(root)
 scrollbar.pack(side = RIGHT, fill = Y)
  
-area = Text(root, yscrollcommand = scrollbar.set)
+area = Text(root, yscrollcommand = scrollbar.set,font="Calibri 16")
 
 area.pack(expand=True, fill='both')
 
@@ -83,7 +81,7 @@ def fun(tString):
     for a in files:
         lst=goforit(a,tString)
         for b in lst:
-            area.insert(END,b+'\n')
+            area.insert(END,b+'\n\n')
         
 
 def solveqry(a):
