@@ -24,7 +24,9 @@ def goforit(a,String):
             cnt+=1
     ret=[]
     if cnt!=0:
-        ret.append("in file "+str(a)+": word "+String+" seen in "+str(cnt)+" pages first occurance in page "+str(foc))
+        ret.append("♥️ found "+String+" in the pdf - "+str(a)+" goto page number "+str(foc)+"\n( "+str(cnt)+" occurances )\n")
+    else:
+        ret.append("🙀 Oh no! no occurance of your word found\n")
     return ret
 
 
@@ -81,7 +83,7 @@ def fun(tString):
     for a in files:
         lst=goforit(a,tString)
         for b in lst:
-            area.insert(END,b+'\n\n')
+            area.insert(END,b+'\n')
         
 
 def solveqry(a):

@@ -26,7 +26,10 @@ def goforit(a,String):
             cnt+=1
     ret=[]
     if cnt!=0:
-        ret.append("in file "+str(a)+": word "+String+" seen in "+str(cnt)+" pages first occurance in page "+str(foc))
+        ret.append("😍 found "+String+" in the pdf - "+str(a)+" goto page number "+str(foc)+"\n( "+str(cnt)+" occurances )\n")
+        ret.append("in file "+str(a)+" word "+String+" seen in "+str(cnt)+" pages first occurance in page "+str(foc))
+    else:
+        ret.append("Oh no! 🥴 no occurance of your word found\n")
     return ret
 
 def fun(tString):
