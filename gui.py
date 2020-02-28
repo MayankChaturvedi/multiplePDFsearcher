@@ -17,7 +17,6 @@ def goforit(a,String):
     # extract text and do the search
     cnt=0
     foc=-1
-    print(String)
     for i in range(0, NumPages):
         PageObj = object.getPage(i)
         Text = PageObj.extractText()
@@ -52,7 +51,7 @@ txt = Entry(window,width=10)
 
 txt.grid(column=1, row=0)
 
-lbl2=Label(window,text="searching... ");
+lbl2=Label(window,text="searching... ")	
 
 def solveqry(a):
     fun(a)
