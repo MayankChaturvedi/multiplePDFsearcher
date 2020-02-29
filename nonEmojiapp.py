@@ -77,8 +77,6 @@ area = Text(root, yscrollcommand = scrollbar.set,font="Calibri 16")
 area.pack(expand=True, fill='both')
 
 scrollbar.config(command = area.yview)
-    
-
 
 
 def fun(tString):
@@ -98,7 +96,7 @@ def fun(tString):
             area.insert(END,b+'\n')
         if tct==1:
             link1 = Label(down, text=str(a), fg="blue", cursor="hand2")
-            link1.pack()
+            link1.pack(side="left")
             link1.bind("<Button-1>", lambda e: webbrowser.open_new(r"file://"+os.path.realpath(str(a))))
     if tot==0:
         area.insert(END," :( Ah shit! Here we go again. The word not found")
