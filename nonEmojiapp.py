@@ -27,7 +27,7 @@ def goforit(a,String):
     tot=(cnt+(tot))
     ret=[]
     if cnt!=0:
-        ret.append("♥️ found "+String+" in the pdf - "+str(a)+" goto page number "+str(foc)+"\n( "+str(cnt)+" occurances )\n")
+        ret.append(":) found "+String+" in the pdf - "+str(a)+" goto page number "+str(foc)+"\n( "+str(cnt)+" occurances )\n")
     return ret
 
 
@@ -36,7 +36,7 @@ def goforit(a,String):
 root = Tk()
 root.geometry("1000x900")
 
-root.title("Made with ♥️ for math peeps")
+root.title("Made with :) for math peeps")
 
 up = Frame(root, borderwidth=2, relief="solid")
 
@@ -77,6 +77,8 @@ area = Text(root, yscrollcommand = scrollbar.set,font="Calibri 16")
 area.pack(expand=True, fill='both')
 
 scrollbar.config(command = area.yview)
+    
+
 
 
 def fun(tString):
