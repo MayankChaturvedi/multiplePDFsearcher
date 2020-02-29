@@ -2,7 +2,10 @@ from tkinter import *
 import PyPDF2
 import re
 import os
+import webbrowser
 
+def callback(url):
+    webbrowser.open_new(url)
 tot=0
 def goforit(a,String):
     # open the pdf file
