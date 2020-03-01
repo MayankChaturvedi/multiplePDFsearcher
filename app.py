@@ -165,12 +165,12 @@ def open(filename):
         opener ="open" if sys.platform == "darwin" else "xdg-open"
         subprocess.call([opener, filename])
         
-        
+blst=[]
 def fun(tString):
     area.delete('1.0', END)
-    global dfrm
-    dfrm.destroy()
-    dfrm=DoubleScrolledFrame(root,height=20, width=1000, borderwidth=2, relief=SUNKEN, background="light gray")
+    for btn in blst:
+        btn.destroy()
+    blst.clear()
     dfrm.pack(side="bottom", expand=True)
     files = [f for f in os.listdir('.') if os.path.isfile(f)]
     files = filter(lambda f: f.endswith(('.pdf','.PDF')), files)
@@ -190,6 +190,7 @@ def fun(tString):
         for i in range(0,len(opfiles)):
             button = Button(dfrm,text=opfiles[i], command=lambda i=i: open(opfiles[i]))
             button.pack(side="left")
+            blst.append(button)
             
 def solveqry(a):
     fun(a)
