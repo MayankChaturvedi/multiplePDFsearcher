@@ -168,8 +168,10 @@ def open(filename):
         
 def fun(tString):
     area.delete('1.0', END)
-    #for widget in down.winfo_children():
-    #widget.destroy()
+    global dfrm
+    dfrm.destroy()
+    dfrm=DoubleScrolledFrame(root,height=20, width=1000, borderwidth=2, relief=SUNKEN, background="light gray")
+    dfrm.pack(side="bottom", expand=True)
     files = [f for f in os.listdir('.') if os.path.isfile(f)]
     files = filter(lambda f: f.endswith(('.pdf','.PDF')), files)
     tString
